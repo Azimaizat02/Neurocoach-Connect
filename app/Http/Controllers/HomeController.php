@@ -107,29 +107,28 @@ class HomeController extends Controller
 
     public function calendar(Request $request)
 {
-    // Get the requested month and year, or use the current month/year as default
-    $month = $request->input('month', Carbon::now()->month);
-    $year = $request->input('year', Carbon::now()->year);
+        // Get the requested month and year or use the current month/year if none specified
+        $month = $request->input('month', Carbon::now()->month);
+        $year = $request->input('year', Carbon::now()->year);
 
-    // Retrieve appointments for the selected month and year
-    $data = Appointment::with('book')
-        ->whereMonth('ondate', $month)
-        ->whereYear('ondate', $year)
-        ->get();
+        // Calculate previous and next month
+        $currentDate = Carbon::create($year, $month, 1);
+        $previousMonth = $currentDate->copy()->subMonth();
+        $nextMonth = $currentDate->copy()->addMonth();
 
-    // Calculate previous and next month for navigation
-    $currentDate = Carbon::create($year, $month);
-    $previousMonth = $currentDate->copy()->subMonth();
-    $nextMonth = $currentDate->copy()->addMonth();
+        // Retrieve all appointments for the specified month and year
+        $data = Appointment::whereYear('ondate', $year)
+                            ->whereMonth('ondate', $month)
+                            ->get();
 
-    // Pass the data and navigation details to the view
-    return view('home.calendar', [
-        'data' => $data,
-        'month' => $month,
-        'year' => $year,
-        'previousMonth' => $previousMonth,
-        'nextMonth' => $nextMonth,
-    ]);
+        // Pass data to the view
+        return view('home.calendar', [
+            'data' => $data,
+            'month' => $month,
+            'year' => $year,
+            'previousMonth' => $previousMonth,
+            'nextMonth' => $nextMonth
+        ]);
 }
 
 
