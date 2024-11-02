@@ -34,6 +34,19 @@ Route::get('/booking_update/{id}', [AdminController::class,'booking_update']);
 Route::post('/edit_booking/{id}', [AdminController::class,'edit_booking']);
 
 
+Route::get('/report', [AdminController::class,'report']);
+
+Route::post('/add_report', [AdminController::class,'add_report']);
+
+Route::get('/view_report', [AdminController::class,'view_report']);
+
+Route::get('/report_delete/{id}', [AdminController::class,'report_delete']);
+
+Route::get('/report_update/{id}', [AdminController::class,'report_update']);
+
+Route::post('/edit_report/{id}', [AdminController::class,'edit_report']);
+
+
 Route::get('/book_details/{id}', [HomeController::class,'book_details']);
 
 Route::post('/add_appointment/{id}', [HomeController::class,'add_appointment']);

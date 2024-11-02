@@ -18,6 +18,8 @@ use App\Models\Gallary;
 
 use App\Models\Contact;
 
+use App\Models\Report;
+
 use Carbon\Carbon;
 
 
@@ -286,5 +288,67 @@ class AdminController extends Controller
         $data = Appointment::all();
 
         return view('admin.reminder',compact('data'));
+    }
+
+    public function report()
+    {
+        return view('admin.report');
+    }
+
+    public function add_report(Request $request)
+    {
+        $data = new Report;
+
+        $data->report_writer = $request->name;
+
+        $data->report_title = $request->title;
+
+        $data->desc = $request->desc;
+
+        $data->report_date = $request->date;
+
+        $data->save();
+
+        return redirect()->back();
+    }
+
+    public function view_report()
+    {
+        $data = Report::all();
+
+        return view('admin.view_report',compact('data'));
+    }
+
+    public function report_delete($id)
+    {
+        $data = Report::find($id);
+
+        $data->delete();
+
+        return redirect()->back();
+    }
+
+    public function report_update($id)
+    {
+        $data = Report::find($id);
+
+        return view('admin.report_update',compact('data'));
+    }
+
+    public function edit_report(Request $request, $id)
+    {
+        $data = Report::find($id);
+
+        $data->report_writer = $request->name;
+
+        $data->report_title = $request->title;
+
+        $data->desc = $request->desc;
+
+        $data->report_date = $request->date;
+
+        $data->save();
+
+        return redirect()->back();
     }
 }

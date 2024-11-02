@@ -12,8 +12,8 @@
       <ul class="list-unstyled">
               <li class="active"><a href="{{url('/home')}}"> <i class="icon-home" style="color: #DB6574;"></i>Home </a></li>
 
-              <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-windows" style="color: #DB6574;"></i>Booking Management </a>
-                <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
+              <li><a href="#bookingdropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-windows" style="color: #DB6574;"></i>Booking Management </a>
+                <ul id="bookingdropdownDropdown" class="collapse list-unstyled ">
                   <li><a href="{{url('create_booking')}}">Add Bookings</a></li>
                   <li><a href="{{url('view_booking')}}">View Type of Bookings</a></li>
                   <li><a href="{{url('reminder')}}">Reminder</a></li>
@@ -25,6 +25,13 @@
             </li>
 
             <li><a href="{{url('view_gallary')}}"> <i class="fa fa-camera" style="color: #DB6574;"></i>Gallary</a></li>
+
+            <li><a href="#reportdropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-folder" style="color: #DB6574;"></i>Report Management</a>
+                <ul id="reportdropdownDropdown" class="collapse list-unstyled ">
+                  <li><a href="{{url('report')}}">Add Report</a></li>
+                  <li><a href="{{url('view_report')}}">View Report</a></li>
+                </ul>
+              </li>
 
             <li><a href="{{url('all_messages')}}"> <i class="fa fa-envelope" style="color: #DB6574;"></i>Messages</a></li>
       </ul>
