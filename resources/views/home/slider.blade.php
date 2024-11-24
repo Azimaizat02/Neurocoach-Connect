@@ -6,18 +6,17 @@
           <li data-target="#myCarousel" data-slide-to="2"></li>
        </ol>
        <div class="carousel-inner">
-          <div class="carousel-item active">
-             <img class="first-slide" src="images/banner1.jpg" alt="First slide" style="width: 100%; height: auto;">
-             <div class="container">
-             </div>
-          </div>
-          <div class="carousel-item">
-             <img class="second-slide" src="images/banner2.jpg" alt="Second slide" style="width: 100%; height: auto;">
-          </div>
-          <div class="carousel-item">
-             <img class="third-slide" src="images/banner3.jpg" alt="Third slide" style="width: 100%; height: auto;">
-          </div>
-       </div>
+        <div class="carousel-item active">
+          <img class="first-slide" src="images/ndl4.jpg" alt="First slide" style="width: 100%; height: 500px; object-fit: cover;">
+          <div class="container"></div>
+        </div>
+        <div class="carousel-item">
+          <img class="second-slide" src="images/ndl2.jpg" alt="Second slide" style="width: 100%; height: 500px; object-fit: cover;">
+        </div>
+        <div class="carousel-item">
+          <img class="third-slide" src="images/ndl5.jpg" alt="Third slide" style="width: 100%; height: 500px; object-fit: cover;">
+        </div>
+      </div>
        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
        <span class="sr-only">Previous</span>

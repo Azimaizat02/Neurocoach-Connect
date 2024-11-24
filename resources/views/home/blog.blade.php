@@ -12,7 +12,7 @@
           <div class="col-md-4">
              <div class="blog_box">
                 <div class="blog_img">
-                   <figure><img src="images/blog1.jpg" alt="#"/></figure>
+                   <figure><img src="images/ndl2.jpg" alt="#"/></figure>
                 </div>
                 <div class="blog_room">
                    <h3>Bed Room</h3>
