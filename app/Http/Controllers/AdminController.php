@@ -301,6 +301,8 @@ class AdminController extends Controller
 
         $data->report_writer = $request->name;
 
+        $data->report_type = $request->type;
+
         $data->report_title = $request->title;
 
         $data->desc = $request->desc;
@@ -340,6 +342,8 @@ class AdminController extends Controller
         $data = Report::find($id);
 
         $data->report_writer = $request->name;
+
+        $data->report_type = $request->type;
 
         $data->report_title = $request->title;
 

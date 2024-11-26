@@ -42,10 +42,8 @@
                             <span>BRAIN TRAINING</span>
                             <label class="online_book">30 Minutes</label>
                          </div>
-                         <div class="col-md-12">
-                            <a href="">
-                                <button class="book_btn">Book Now</button>
-                            </a>
+                         <div class="col-md-12 text-center">
+                            <a href="#book" class="book_btn">Book Now</a>
                          </div>
                       </div>
                    </form>

@@ -37,6 +37,16 @@
                     <input type="text" name="name">
 
                 </div>
+
+                <div class="div_deg">
+                    <label>Report Type</label>
+                    <select name="type">
+                    <option selected value="General">General</option>
+                    <option value="Incident">Incident</option>
+                    <option value="Memo">Memo</option>
+                    </select>
+                </div>
+
                 <div class="div_deg">
                     <label>Report Title</label>
                     <input type="text" name="title">

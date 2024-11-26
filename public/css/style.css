@@ -366,24 +366,23 @@ button {
     right: 30px;
 }
 
-.book_btn {
-    background-color: #fe0000;
-    max-width: 189px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 10px 0;
-    border-radius: 50px;
-    color: #fff;
-    font-size: 20px;
-    transition: ease-in 0.5s;
-    display: block;
+a.book_btn {
+    background-color: #ff0000 !important; /* Red color */
+    color: #ffffff !important; /* White text */
+    border: none !important;
+    padding: 10px 20px !important;
+    border-radius: 5px !important;
+    font-size: 1.2rem !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
 }
 
-.book_btn:hover {
-    background-color: #fff;
-    color: #fe0000;
-    transition: ease-in 0.5s;
+a.book_btn:hover {
+    background-color: #cc0000 !important; /* Darker red on hover */
+    transform: scale(1.05) !important; /* Slightly enlarge the button on hover */
 }
+
 
 .carousel-control-next,
 .carousel-control-prev {
@@ -504,53 +503,53 @@ button {
 }
 /** end about section **/
 
-/** our_room section **/
+/** our_book section **/
 
-.our_room {
+.our_book {
      background-color: #f4f5f7;
      padding: 60px 0 30px 0;
      margin-top: 90px;
 }
 
-.our_room .titlepage {
+.our_book .titlepage {
      text-align: center;
 }
 
-.our_room .titlepage p {
+.our_book .titlepage p {
      color: #121212;
      font-size: 17px;
      margin-top: 20px;
 }
 
-.our_room .room {
+.our_book .room {
      text-align: center;
      background-color: #fff;
      margin-bottom: 30px;
      transition: ease-in all 0.5s;
 }
 
-.our_room .room .room_img {
+.our_book .room .room_img {
      overflow: hidden;
 }
 
-.our_room .room .room_img figure {
+.our_book .room .room_img figure {
      margin: 0;
 }
 
-.our_room .room .room_img figure img {
+.our_book .room .room_img figure img {
      width: 100%;
      transition: all .5s;
 }
 
-.our_room .room .room_img figure img:hover {
+.our_book .room .room_img figure img:hover {
      transform: scale(1.2);
 }
 
-.our_room .room .bed_room {
+.our_book .room .bed_room {
      padding: 33px 30px;
 }
 
-.our_room .room .bed_room h3 {
+.our_book .room .bed_room h3 {
      color: #121212;
      font-size: 25px;
      line-height: 20px;
@@ -566,7 +565,7 @@ button {
 }
 
 
-/** end our_room section **/
+/** end our_book section **/
 
 
 /** gallery  section **/

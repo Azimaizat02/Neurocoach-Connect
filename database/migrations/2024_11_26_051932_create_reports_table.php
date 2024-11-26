@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('reports', function (Blueprint $table) {
             $table->id();
             $table->string('report_writer')->nullable();
+            $table->string('report_type')->nullable();
             $table->string('report_title')->nullable();
             $table->longText('desc')->nullable();
             $table->string('report_date')->nullable();

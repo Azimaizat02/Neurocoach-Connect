@@ -43,6 +43,7 @@ td
         <table class="table_deg">
             <tr>
                <th class="th_deg">Name</th>
+               <th class="th_deg">Type</th>
                <th class="th_deg">Title</th>
                <th class="th_deg">Description</th>
                <th class="th_deg">Date</th>
@@ -53,6 +54,7 @@ td
             @foreach($data as $data)
             <tr>
                 <td>{{$data->report_writer}}</td>
+                <td>{{$data->report_type}}</td>
                 <td>{{$data->report_title}}</td>
                 <td>{{$data->desc}}</td>
                 <td>{{$data->report_date}}</td>

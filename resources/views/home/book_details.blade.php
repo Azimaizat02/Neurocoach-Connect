@@ -37,7 +37,7 @@
       <!-- end header -->
 
 
-      <div  class="our_room">
+      <div  class="our_book">
         <div class="container">
            <div class="row">
               <div class="col-md-12">

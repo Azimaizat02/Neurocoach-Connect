@@ -40,6 +40,18 @@
                     <input type="text" name="name" value="{{$data->report_writer}}">
 
                 </div>
+
+                <div class="div_deg">
+                    <label>Report Type</label>
+                    <select name="type">
+                        <option selected value="{{$data->report_type}}">{{$data->report_type}}</option>
+
+                        <option value="General">General</option>
+                        <option value="Incident">Incident</option>
+                        <option value="Memo">Memo</option>
+                    </select>
+                </div>
+
                 <div class="div_deg">
                     <label>Report Title</label>
                     <input type="text" name="title" value="{{$data->report_title}}">

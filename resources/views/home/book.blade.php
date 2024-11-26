@@ -1,4 +1,4 @@
-<div class="our_room">
+<div id="book" class="our_book">
     <div class="container">
         <div class="row text-center">
             <div class="col-md-12">
