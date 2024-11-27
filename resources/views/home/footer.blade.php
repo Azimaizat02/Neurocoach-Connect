@@ -6,7 +6,8 @@
                 <h3>Contact US</h3>
                 <ul class="conta">
                    <li><i class="fa fa-globe" aria-hidden="true"></i>Neurocoach Digital Lab, KICT, IIUM, Jln Gombak, 50728, Wilayah Persekutuan Kuala Lumpur</li>
-                   <li><i class="fa fa-phone" aria-hidden="true"></i>+016-206 3258</li>
+                   <li><i class="fa fa-phone" aria-hidden="true"></i>+603-6421 3580</li>
+                   <li><i class="fa fa-whatsapp" aria-hidden="true"></i>+6016-206 3258</li>
                    <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="#">neurocoachdigitallab@iium.edu.my</a></li>
                    <li><i class="fa fa-desktop" aria-hidden="true"></i><a href="https://kulliyyah.iium.edu.my/kict/ndl/">Main Website</a></li>
                 </ul>
@@ -15,24 +16,19 @@
                 <h3>Menu Link</h3>
                 <ul class="link_menu">
                    <li class="active"><a href="#">Home</a></li>
-                   <li><a href="about.html"> about</a></li>
-                   <li><a href="room.html">Our Room</a></li>
-                   <li><a href="gallery.html">Gallery</a></li>
-                   <li><a href="blog.html">Blog</a></li>
+                   <li><a href="about.html">About</a></li>
+                   <li><a href="room.html">Book Now</a></li>
+                   <li><a href="gallery.html">Calendar</a></li>
+                   <li><a href="blog.html">Policy</a></li>
                    <li><a href="contact.html">Contact Us</a></li>
                 </ul>
              </div>
              <div class="col-md-4">
-                <h3>News letter</h3>
-                <form class="bottom_form">
-                   <input class="enter" placeholder="Enter your email" type="text" name="Enter your email">
-                   <button class="sub_btn">subscribe</button>
-                </form>
+                <h3>Socials</h3>
                 <ul class="social_icon">
-                   <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                   <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                   <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                   <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                   <li><a href="https://www.facebook.com/neurocoachdigitallab/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                   <li><a href="https://www.instagram.com/neurocoachdigitallabofficial/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                   <li><a href="https://linktr.ee/neurocoachdigitallab"><i class="fa fa-link" aria-hidden="true"></i></a></li>
                 </ul>
              </div>
           </div>

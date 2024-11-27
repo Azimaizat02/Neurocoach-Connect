@@ -43,7 +43,8 @@
               <div class="col-md-12">
                  <div class="titlepage">
                     <h2>Our Services</h2>
-                    <p>Lorem Ipsum available, but the majority have suffered </p>
+                    <p>Learn about our top-notch EEG and neurofeedback therapy services, designed
+                        to boost your mental health with seamless setup and personalized care!</p>
                  </div>
               </div>
            </div>

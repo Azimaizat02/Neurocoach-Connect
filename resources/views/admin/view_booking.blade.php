@@ -57,7 +57,9 @@ td
                 <td>{!! Str::limit($data->description,150) !!}</td>
                 <td>RM{{$data->price}}</td>
                 <td>{{$data->booking_type}}</td>
-                <td><img width= "100" src="booking/{{$data->image}}"></td>
+                <td style="text-align: center;">
+                    <img width="100" src="booking/{{$data->image}}" style="display: block; margin: auto;">
+                </td>
                 <td> <a onclick="confirmation(event)" class= "btn btn-danger" href="{{url('booking_delete',$data->id)}}">Delete</a></td>
                 <td> <a class= "btn btn-warning" href="{{url('booking_update',$data->id)}}">Update</a></td>
             </tr>
