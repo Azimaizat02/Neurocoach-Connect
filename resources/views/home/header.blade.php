@@ -35,7 +35,7 @@
                                 <a class="nav-link" href="{{url('calendar')}}">Calendar</a>
                             </li>
                             <li class="nav-item" style="padding-right: 10px;">
-                                <a class="nav-link" href="">Policy</a>
+                                <a class="nav-link" href="{{url('policy')}}">Policy</a>
                             </li>
                             <li class="nav-item" style="padding-right: 10px;">
                                 <a class="nav-link" href="{{url('contact_us')}}">Contact Us</a>

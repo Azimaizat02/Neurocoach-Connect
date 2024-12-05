@@ -136,5 +136,10 @@ public function about_us()
         return view('home.about_us');
     }
 
+public function policy()
+    {
+        return view('home.policy');
+    }
+
 
 }

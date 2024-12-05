@@ -83,3 +83,5 @@ Route::get('/calendar', [HomeController::class,'calendar'])->name('calendar.inde
 Route::get('/reminder', [AdminController::class,'reminder']);
 
 Route::get('/about_us', [HomeController::class,'about_us']);
+
+Route::get('/policy', [HomeController::class,'policy']);
