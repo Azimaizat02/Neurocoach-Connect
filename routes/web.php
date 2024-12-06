@@ -85,3 +85,15 @@ Route::get('/reminder', [AdminController::class,'reminder']);
 Route::get('/about_us', [HomeController::class,'about_us']);
 
 Route::get('/policy', [HomeController::class,'policy']);
+
+Route::get('/book_info', [HomeController::class,'book_info']);
+
+Route::get('/invoice', [AdminController::class,'invoice']);
+
+Route::post('/add_invoice', [AdminController::class,'add_invoice']);
+
+Route::get('/view_invoice', [AdminController::class,'view_invoice']);
+
+Route::get('/download/{file}', [AdminController::class,'download']);
+
+Route::get('/show_invoice/{id}', [AdminController::class,'show_invoice']);

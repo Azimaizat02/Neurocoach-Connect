@@ -150,38 +150,36 @@
                 <h3>2. Appointment Policies</h3>
                 <p> <b>Arrival Time</b>: Clients are required to arrive at least <b>10 minutes</b> before their scheduled appointment time to ensure a smooth check-in process. If a client anticipates being late, they must inform us in advance. Clients who are more than <b>20 minutes</b> late will have their appointment <b>postponed to a later date.</b></p>
                 <p> <b>Last-Minute Cancellations</b>: Clients who cancel their appointments at the last minute will <b>not be eligible for a refund.</b> However, they will have the option to <b>book a new appointment</b> at a later date.</p>
-                <h3>3. Prohibited Activities</h3>
+                <h3>3. Client Responsibilities</h3>
+                <p> It is the client's responsibility to book sessions within the validity period.</p>
+                <p> Please comply with the following tasks prior to the EEG session:</p>
+                <p>a. Wash your hair the night before the EEG session</p>
+                <p>b. No hair gel used before the EEG session.</p>
+                <p>c. Get ample sleep</p>
+                <p>d. Avoid coffee or tea before the EEG session.</p>
+                <p>e. Please do not take Cariprazine or Propranolol before the EEG Assessment.</p>
+                <h3>4. EEG Result Validity</h3>
+                <p>EEG results are valid for <b>two (2) months</b> from the date of issuance (result sharing date).</p>
+                <p>If no Neurofeedback sessions are booked within this period, the EEG results will be considered invalid.</p>
+                <h3>5. Prohibited Activities</h3>
                 <p>Users agree not to:</p>
                 <p>Engage in unlawful activities or violate any regulations.</p>
                 <p>Use the platform for unauthorized commercial purposes.</p>
                 <p>Introduce viruses or harmful code.</p>
-                <h3>4. Intellectual Property</h3>
+                <h3>6. Intellectual Property</h3>
                 <p>All content on Neurocoach Connect, including text, graphics, logos, and software, is the property of Neurocoach Digital Lab and protected by intellectual property laws. You may not reproduce or distribute content without permission</p>
-                <h3>5. Limitation of Liability</h3>
-                <p>Neurocoach Connect is not liable for any indirect, incidental, or consequential damages arising from the use of our platform or services.</p>
-                <h3>6. Termination</h3>
+                <h3>7. Limitations of Service</h3>
+                <p>Neurocoach Connect is not liable for any indirect, incidental, or consequential damages arising from the use of our platform or services. Our services are not a substitute for professional medical advice. Always consult a qualified health provider for medical concerns.</p>
+                <h3>7. Payment Policy</h3>
+                <p>All payments for the EEG and NFB assessment are <b>non-refundable</b> if no booking sessions are scheduled within the validity period.</p>
+                <h3>8. Termination</h3>
                 <p>We reserve the right to suspend or terminate accounts that violate these terms or engage in fraudulent activities.</p>
-                <h3>7. Changes to Terms</h3>
+                <h3>9. Changes to Terms</h3>
                 <p>Neurocoach Connect may update these terms from time to time. Users will be notified of any significant changes.</p>
-                <h3>8. Governing Law</h3>
+                <h3>10. Amendments</h3>
+                <p>We reserve the right to amend these terms, with changes communicated to clients.</p>
+                <h3>11. Governing Law</h3>
                 <p>These Terms and Conditions are governed by the laws of Personal Data Protection Act 2010 (PDPA), without regard to its conflict of law principles.</p>
-            </div>
-
-            <!-- Refund Policy -->
-            <div class="policy-content">
-                <div class="icon">
-                    <i class="bi bi-wallet2"></i>
-                </div>
-                <h2>Refund Policy</h2>
-                <p>
-                    We offer a clear and straightforward refund policy for our services. If you are unsatisfied or need to cancel a service, our Refund Policy explains the process and criteria for eligibility.
-                </p>
-                <p>
-                    If you cancel your appointment last minute, you will not be eligible for a refund but can book a new appointment. If you are unsatisfied with the service provided, you may reach out to us for further assistance.
-                </p>
-                <p>
-                    Learn more by checking our <a href="#">Refund Policy</a>.
-                </p>
             </div>
 
             <!-- Contact Button -->

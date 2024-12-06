@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\DB;
 
+use Illuminate\Support\Facades\Stroage;
+
 use App\Models\User;
 
 use Illuminate\Support\Facades\Auth;
@@ -19,6 +21,8 @@ use App\Models\Gallary;
 use App\Models\Contact;
 
 use App\Models\Report;
+
+use App\Models\Invoice;
 
 use Carbon\Carbon;
 
@@ -362,5 +366,48 @@ class AdminController extends Controller
         $data->save();
 
         return redirect()->back();
+    }
+
+    public function invoice()
+    {
+        return view('admin.invoice');
+    }
+
+    public function add_invoice(Request $request)
+    {
+        $data = new Invoice();
+
+        $data->title = $request->title;
+
+        $data->description = $request->description;
+
+        $file=$request->file;
+
+        $filename=time().'.'.$file->getClientOriginalExtension();
+
+        $request->file->move('invoiceandpayment',$filename);
+
+        $data->file=$filename;
+
+        $data->save();
+
+        return redirect()->back();
+    }
+
+    public function view_invoice()
+    {
+        $data=Invoice::all();
+        return view('admin.view_invoice',compact('data'));
+    }
+
+    public function download(Request $request,$file)
+    {
+        return response()->download(public_path('invoiceandpayment/'.$file));
+    }
+
+    public function show_invoice($id)
+    {
+        $data=Invoice::find($id);
+        return view('admin.show_invoice',compact('data'));
     }
 }

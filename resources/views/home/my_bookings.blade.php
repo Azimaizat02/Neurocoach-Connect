@@ -15,6 +15,7 @@
             margin: auto;
             text-align: center;
             margin-top: 40px;
+            margin-bottom: 50px;
         }
 
         .th_deg
@@ -65,7 +66,6 @@
            <th class="th_deg">End</th>
            <th class="th_deg">Date</th>
            <th class="th_deg">Status</th>
-           {{-- <th class="th_deg">Calendar</th> --}}
 
         </tr>
 
@@ -92,12 +92,6 @@
                 <span style="color: green;">WAITING</span>
                 @endif
             </td>
-            {{-- <td>
-            <form action="{{ route('appointments.linkToGoogleCalendar', $data->id) }}" method="POST">
-                @csrf
-                <button type="submit" class="btn btn-primary">Link to Google Calendar</button>
-            </form>
-        </td> --}}
         </tr>
         @endforeach
 

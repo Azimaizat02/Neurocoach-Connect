@@ -67,15 +67,15 @@ a {
 }
 
 .text-gray-light {
-  color: #FFFFFF;
+  color: #808080;
 }
 
 .text-gray {
-  color: #FFFFFF;
+  color: #808080;
 }
 
 .text-gray-dark {
-  color: #FFFFFF;
+  color: #808080;
 }
 
 .text-black {
@@ -238,7 +238,7 @@ pre {
 .page-header {
   padding: 20px 15px;
   background: #323053;
-  color: #ffffff;
+  color: #747a7a;
   margin-bottom: 30px;
 }
 
@@ -995,7 +995,7 @@ nav#sidebar.shrinked a[aria-expanded="true"]::after {
 .statistic-block {
   padding: 20px;
   background: #323053;
-  color: #FFFFFF;
+  color: #000000;
 }
 
 .statistic-block .title {

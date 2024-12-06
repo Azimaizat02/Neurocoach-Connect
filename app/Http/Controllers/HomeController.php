@@ -141,5 +141,10 @@ public function policy()
         return view('home.policy');
     }
 
+public function book_info()
+    {
+        return view('home.book_info');
+    }
+
 
 }
