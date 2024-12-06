@@ -46,10 +46,12 @@ class AdminController extends Controller
                 // Fetch total number of users and appointments
                 $user = User::where('usertype', 'user')->count();
                 $appointment = Appointment::count();
+                $report = Report::count();
 
-                // Example maximum values (these can be dynamic or hardcoded)
+                // Example maximum values
                 $maxPatients = 100;
                 $maxAppointments = 100;
+                $maxReports = 100;
 
                 // Calculate progress percentages
                 $patientProgress = ($user / $maxPatients) * 100;
@@ -57,6 +59,9 @@ class AdminController extends Controller
 
                 $appointmentProgress = ($appointment / $maxAppointments) * 100;
                 $appointmentProgress = min($appointmentProgress, 100); // Ensure it doesn't exceed 100%
+
+                $reportProgress = ($report / $maxReports) * 100;
+                $reportProgress = min($reportProgress, 100); // Ensure it doesn't exceed 100%
 
              // Line chart data: appointments per month for the current year
              $currentYear = Carbon::now()->year;
@@ -73,15 +78,18 @@ class AdminController extends Controller
                  $appointmentsData[] = $monthlyAppointments[$i] ?? 0;
              }
 
+              // Count appointments by status
+            $approvedCount = Appointment::where('status', 'APPROVE')->count();
+            $rejectedCount = Appointment::where('status', 'REJECTED')->count();
+            $waitingCount = Appointment::where('status', 'waiting')->count();
+
              // Pass progress percentages and chart data to the view
-             return view('admin.index', compact('user', 'appointment', 'patientProgress', 'appointmentProgress', 'appointmentsData'));
+             return view('admin.index', compact('user', 'appointment', 'report', 'patientProgress', 'appointmentProgress', 'reportProgress', 'appointmentsData','approvedCount','rejectedCount','waitingCount'));
             } else {
                 return redirect()->back();
             }
         }
     }
-
-
 
     public function home()
     {
