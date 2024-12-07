@@ -15,12 +15,12 @@
              <div class="col-md-4">
                 <h3>Menu Link</h3>
                 <ul class="link_menu">
-                   <li class="active"><a href="#">Home</a></li>
-                   <li><a href="about.html">About</a></li>
-                   <li><a href="room.html">Book Now</a></li>
-                   <li><a href="gallery.html">Calendar</a></li>
-                   <li><a href="blog.html">Policy</a></li>
-                   <li><a href="contact.html">Contact Us</a></li>
+                   <li class="active"><a href="{{url('/')}}">Home</a></li>
+                   <li><a href="{{url('about_us')}}">About</a></li>
+                   <li><a href="#book">Book Now</a></li>
+                   <li><a href="{{url('calendar')}}">Calendar</a></li>
+                   <li><a href="{{url('policy')}}">Policy</a></li>
+                   <li><a href="{{url('contact_us')}}">Contact Us</a></li>
                 </ul>
              </div>
              <div class="col-md-4">

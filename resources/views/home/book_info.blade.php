@@ -129,6 +129,12 @@
                     <b>Ref 2: Client's name</b>
                 </p>
                 <p>
+                    <b>A copy of the payment slip must be submitted to:</b>
+                </p>
+                <p>
+                    <b>Neurocoach Digital Lab :</b> 016 - 206 3258 <b>OR</b> neurocoachdigitallab@iium.edu.my
+                </p>
+                <p>
                     If you encounter any difficulties or have questions, please don't hesitate to contact our customer support team for assistance. We look forward to serving you and ensuring a smooth registration experience.
                 </p>
                 <p>
@@ -152,6 +158,14 @@
 
                 <p> NFB = Neurofeedback</p>
 
+            </div>
+
+            <div class="policy-content">
+                <div class="icon">
+                    <i class="bi bi-file-text"></i>
+                </div>
+                <h3>Visit Our Main Website to learn more.</h3>
+                <p> Click this link <a href="https://kulliyyah.iium.edu.my/kict/ndl/"><b>Main Website</b></a></p>
             </div>
 
             <!-- Contact Button -->

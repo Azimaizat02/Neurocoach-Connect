@@ -36,11 +36,11 @@
                       <div class="row">
                          <div class="col-md-12">
                             <span>EEG & ALERTNESS</span>
-                            <label class="online_book">90 Minutes</label>
+                            <label class="online_book">Evaluate your brain activity through our EEG...</label>
                          </div>
                          <div class="col-md-12">
                             <span>BRAIN TRAINING</span>
-                            <label class="online_book">30 Minutes</label>
+                            <label class="online_book">Train your brain to achieve the healthy state...</label>
                          </div>
                          <div class="col-md-12 text-center">
                             <a href="#book" class="book_btn">Book Now</a>

@@ -59,13 +59,11 @@
         <tr>
            <th class="th_deg">ID</th>
            <th class="th_deg">Appointment Type</th>
-           <th class="th_deg">Patient Name</th>
-           <th class="th_deg">Email</th>
-           <th class="th_deg">Phone</th>
            <th class="th_deg">Start</th>
            <th class="th_deg">End</th>
            <th class="th_deg">Date</th>
            <th class="th_deg">Status</th>
+           <th class="th_deg">Payment</th>
 
         </tr>
 
@@ -73,9 +71,6 @@
         <tr>
             <td>{{$data->appointment_id}}</td>
             <td>{{$data->book->booking_type}}</td>
-            <td>{{$data->name}}</td>
-            <td>{{$data->email}}</td>
-            <td>{{$data->phone}}</td>
             <td>{{$data->start_time}}</td>
             <td>{{$data->end_time}}</td>
             <td>{{$data->ondate}}</td>
@@ -92,6 +87,7 @@
                 <span style="color: green;">WAITING</span>
                 @endif
             </td>
+            <td><a href=""><b>Click Here</b></a></td>
         </tr>
         @endforeach
 
