@@ -24,6 +24,8 @@ use App\Models\Report;
 
 use App\Models\Invoice;
 
+use App\Models\Payment;
+
 use Carbon\Carbon;
 
 
@@ -51,11 +53,13 @@ class AdminController extends Controller
                 $user = User::where('usertype', 'user')->count();
                 $appointment = Appointment::count();
                 $report = Report::count();
+                $invoice = Invoice::count();
 
                 // Example maximum values
                 $maxPatients = 100;
                 $maxAppointments = 100;
                 $maxReports = 100;
+                $maxInvoice = 100;
 
                 // Calculate progress percentages
                 $patientProgress = ($user / $maxPatients) * 100;
@@ -66,6 +70,9 @@ class AdminController extends Controller
 
                 $reportProgress = ($report / $maxReports) * 100;
                 $reportProgress = min($reportProgress, 100); // Ensure it doesn't exceed 100%
+
+                $invoiceProgress = ($invoice / $maxInvoice) * 100;
+                $invoiceProgress = min($invoiceProgress, 100); // Ensure it doesn't exceed 100%
 
              // Line chart data: appointments per month for the current year
              $currentYear = Carbon::now()->year;
@@ -88,7 +95,7 @@ class AdminController extends Controller
             $waitingCount = Appointment::where('status', 'waiting')->count();
 
              // Pass progress percentages and chart data to the view
-             return view('admin.index', compact('user', 'appointment', 'report', 'patientProgress', 'appointmentProgress', 'reportProgress', 'appointmentsData','approvedCount','rejectedCount','waitingCount'));
+             return view('admin.index', compact('user', 'appointment', 'report', 'invoice', 'patientProgress', 'appointmentProgress', 'reportProgress', 'invoiceProgress', 'appointmentsData','approvedCount','rejectedCount','waitingCount'));
             } else {
                 return redirect()->back();
             }
@@ -409,5 +416,22 @@ class AdminController extends Controller
     {
         $data=Invoice::find($id);
         return view('admin.show_invoice',compact('data'));
+    }
+
+    public function view_payment()
+    {
+        $data=Payment::all();
+        return view('admin.view_payment',compact('data'));
+    }
+
+    public function download_payment(Request $request,$file)
+    {
+        return response()->download(public_path('invoiceandpayment/'.$file));
+    }
+
+    public function show_payment($id)
+    {
+        $data=Payment::find($id);
+        return view('admin.show_payment',compact('data'));
     }
 }

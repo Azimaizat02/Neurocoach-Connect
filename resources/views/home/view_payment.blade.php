@@ -57,39 +57,18 @@
 
       <table class="table_deg">
         <tr>
-           <th class="th_deg">ID</th>
-           <th class="th_deg">Appointment Type</th>
-           <th class="th_deg">Start</th>
-           <th class="th_deg">End</th>
-           <th class="th_deg">Date</th>
-           <th class="th_deg">Status</th>
-           <th class="th_deg">Payment</th>
-           <th class="th_deg">Payment Details</th>
-
+            <th class="th_deg">Payment Title</th>
+            <th class="th_deg">Description</th>
+            <th class="th_deg">View</th>
+            <th class="th_deg">Download</th>
         </tr>
 
         @foreach($data as $data)
         <tr>
-            <td>{{$data->appointment_id}}</td>
-            <td>{{$data->book->booking_type}}</td>
-            <td>{{$data->start_time}}</td>
-            <td>{{$data->end_time}}</td>
-            <td>{{$data->ondate}}</td>
-            <td>
-                @if($data->status == 'APPROVE')
-                <span style="color: skyblue;">APPROVED</span>
-                @endif
-
-                @if($data->status == 'REJECTED')
-                <span style="color: red;">REJECTED</span>
-                @endif
-
-                @if($data->status == 'waiting')
-                <span style="color: green;">WAITING</span>
-                @endif
-            </td>
-            <td><a href="{{url('payment')}}"><b>Click Here</b></a></td>
-            <td><a href="{{url('view_payment')}}"><b>Click Here</b></a></td>
+            <td>{{$data->title}}</td>
+            <td>{{$data->description}}</td>
+            <td><a href="{{url('show_payment',$data->id)}}">View</a></td>
+            <td><a href="{{url('/download',$data->file)}}">Download</a></td>
         </tr>
         @endforeach
 

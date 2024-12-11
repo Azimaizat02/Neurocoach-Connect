@@ -42,7 +42,7 @@ td
 
         <table class="table_deg">
             <tr>
-               <th class="th_deg">Invoice Title</th>
+               <th class="th_deg">Payment Title</th>
                <th class="th_deg">Description</th>
                <th class="th_deg">View</th>
                <th class="th_deg">Download</th>
@@ -52,8 +52,8 @@ td
             <tr>
                 <td>{{$data->title}}</td>
                 <td>{{$data->description}}</td>
-                <td><a href="{{url('show_invoice',$data->id)}}">View</a></td>
-                <td><a href="{{url('/download',$data->file)}}">Download</a></td>
+                <td><a href="{{url('show_payment',$data->id)}}">View</a></td>
+                <td><a href="{{url('/download_payment',$data->file)}}">Download</a></td>
             </tr>
 
             @endforeach

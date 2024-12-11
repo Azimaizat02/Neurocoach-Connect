@@ -37,7 +37,7 @@
                 <ul id="invoicedropdownDropdown" class="collapse list-unstyled ">
                   <li><a href="{{url('invoice')}}">Add Invoice</a></li>
                   <li><a href="{{url('view_invoice')}}">View Invoice</a></li>
-                  <li><a href="{{url('view_report')}}">View Payment</a></li>
+                  <li><a href="{{url('view_payment')}}">View Payment</a></li>
                 </ul>
               </li>
 
