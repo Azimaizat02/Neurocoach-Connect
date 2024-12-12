@@ -15,7 +15,7 @@
             margin: auto;
             text-align: center;
             margin-top: 40px;
-            margin-bottom: 50px;
+            margin-bottom: 180px;
         }
 
         .th_deg
