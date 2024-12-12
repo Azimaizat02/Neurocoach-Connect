@@ -20,8 +20,8 @@
             </div>
 
             <div>
-                <x-label for="name" value="{{ __('Phone') }}" />
-                <x-input id="name" class="block mt-1 w-full" type="text" name="phone" :value="old('phone')" required autofocus autocomplete="phone" />
+                <x-label for="phone" value="{{ __('Phone') }}" />
+                <x-input id="phone" class="block mt-1 w-full" type="text" name="phone" :value="old('phone')" required autofocus autocomplete="phone" />
             </div>
 
             <div class="mt-4">
@@ -32,6 +32,21 @@
             <div class="mt-4">
                 <x-label for="password_confirmation" value="{{ __('Confirm Password') }}" />
                 <x-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
+            </div>
+
+            <!-- Checkbox for agreeing to the policy -->
+            <div class="mt-4 flex items-center">
+                <x-checkbox id="policy_checkbox" name="policy_checkbox" required />
+                <label for="policy_checkbox" class="ms-2 text-sm text-gray-600">
+                    {{ __('I agree to the') }}
+                    <a href="{{ url('policy') }}" target="_blank" class="underline text-sm text-blue-600 hover:text-blue-800 font-bold bg-yellow-100 px-1">
+                        {{ __('Privacy Policy') }}
+                    </a>
+                    {{ __('and') }}
+                    <a href="{{ url('policy') }}" target="_blank" class="underline text-sm text-blue-600 hover:text-blue-800 font-bold bg-yellow-100 px-1">
+                        {{ __('Terms of Service.') }}
+                    </a>
+                </label>
             </div>
 
             @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
