@@ -51,8 +51,8 @@ td {
             <tr>
                 <td>{{$data->title}}</td>
                 <td>{{$data->description}}</td>
-                <td><a href="{{url('show_invoice',$data->id)}}"><strong>View</strong></a></td>
-                <td><a href="{{url('/download',$data->file)}}"><strong>Download</strong></a></td>
+                <td><a href="{{url('show_invoice',$data->id)}}" style="color: blue;"><strong>View</strong></a></td>
+                <td><a href="{{url('/download',$data->file)}}" style="color: blue;"><strong>Download</strong></a></td>
             </tr>
 
             @endforeach

@@ -92,9 +92,9 @@
                 <span style="color: green;">WAITING</span>
                 @endif
             </td>
-            <td><a href="{{url('contact_us')}}"><b>Message</b></a></td>
-            <td><a href="{{url('payment')}}"><b>Click Here</b></a></td>
-            <td><a href="{{url('view_payment_user')}}"><b>Click Here</b></a></td>
+            <td><a href="{{url('contact_us')}}" style="color: green;"><b>Message</b></a></td>
+            <td><a href="{{url('payment')}}" style="color: blue;"><b>Click Here</b></a></td>
+            <td><a href="{{url('view_payment_user')}}" style="color: blue;"><b>Click Here</b></a></td>
         </tr>
         @endforeach
 

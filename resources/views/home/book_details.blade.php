@@ -45,7 +45,7 @@
                     <h2>Our Services</h2>
                     <p>Learn about our top-notch EEG and neurofeedback therapy services, designed
                         to boost your mental health with seamless setup and personalized care!</p>
-                    <p>For More Info, <a href="{{url('book_info')}}">Click Here</a>.</p>
+                        <p>For More Info, <a href="{{url('book_info')}}" style="color: red;">Click Here</a>.</p>
                  </div>
               </div>
            </div>
