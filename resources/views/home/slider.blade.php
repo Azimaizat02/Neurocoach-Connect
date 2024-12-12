@@ -7,14 +7,14 @@
        </ol>
        <div class="carousel-inner">
         <div class="carousel-item active">
-          <img class="first-slide" src="images/ndl4.jpg" alt="First slide" style="width: 100%; height: 500px; object-fit: cover;">
+          <img class="first-slide" src="images/ndl3.jpg" alt="First slide" style="width: 100%; height: 500px; object-fit: cover;">
           <div class="container"></div>
         </div>
         <div class="carousel-item">
           <img class="second-slide" src="images/ndl2.jpg" alt="Second slide" style="width: 100%; height: 500px; object-fit: cover;">
         </div>
         <div class="carousel-item">
-          <img class="third-slide" src="images/ndl5.jpg" alt="Third slide" style="width: 100%; height: 500px; object-fit: cover;">
+          <img class="third-slide" src="images/ndl1.jpg" alt="Third slide" style="width: 100%; height: 500px; object-fit: cover;">
         </div>
       </div>
        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
