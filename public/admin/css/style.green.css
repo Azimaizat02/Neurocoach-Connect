@@ -201,7 +201,7 @@ pre {
 
 .block {
   padding: 20px;
-  background: #2d3035;
+  background: #28255C;
   border: 1px solid #FFFFFF;
   color: #8a8d93;
   margin-bottom: 30px;
@@ -224,7 +224,7 @@ pre {
 
 .page-content {
   position: relative;
-  background: #323053;
+  background: #fdfac8;
   min-height: 100vh;
   width: calc(100% - 280px);
   padding: 0;
@@ -237,8 +237,8 @@ pre {
 
 .page-header {
   padding: 20px 15px;
-  background: #323053;
-  color: #747a7a;
+  background: #fdfac8;
+  color: #000000;
   margin-bottom: 30px;
 }
 
@@ -395,7 +395,7 @@ i[class*='icon-'] {
 * ==========================================================
 */
 nav.navbar {
-  background: #323053;
+  background: #98D0C1;
   color: #8a8d93;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -716,7 +716,7 @@ nav.navbar .dropdown .dropdown-menu.active {
 */
 nav#sidebar {
   width: 280px;
-  background: #2d3035;
+  background: #28255C;
   color: #FFFFFF;
   border-right: 1px solid #FFFFFF;
   /* shrinked navbar */
@@ -740,7 +740,7 @@ nav#sidebar a[data-toggle="collapse"]::after {
 }
 
 nav#sidebar a[aria-expanded="true"] {
-  background: #2d3035;
+  background: #28255C;
 }
 
 nav#sidebar a[aria-expanded="true"]::after {
@@ -809,7 +809,7 @@ nav#sidebar li a {
 }
 
 nav#sidebar li a:hover {
-  background: #34373d;
+  background: #4741a3;
 }
 
 nav#sidebar li a:hover i {
@@ -827,11 +827,11 @@ nav#sidebar li a i {
 nav#sidebar li li a {
   padding: 14px;
   padding-left: 60px;
-  background: #2d3035;
+  background: #28255C;
 }
 
 nav#sidebar li li a:hover {
-  background: #292c32;
+  background: #4741a3;
 }
 
 nav#sidebar li li a:hover i {
@@ -855,7 +855,7 @@ nav#sidebar li.active::before {
 }
 
 nav#sidebar li.active > a {
-  background: #34373d;
+  background: #4741a3;
   color: #FFFFFF;
 }
 
@@ -864,7 +864,7 @@ nav#sidebar li.active i {
 }
 
 nav#sidebar li li.active > a {
-  background: #292c32;
+  background: #4741a3;
 }
 
 nav#sidebar.shrinked {
@@ -994,7 +994,7 @@ nav#sidebar.shrinked a[aria-expanded="true"]::after {
 /* Statistic Block */
 .statistic-block {
   padding: 20px;
-  background: #323053;
+  background: #98D0C1;
   color: #000000;
 }
 
@@ -1010,14 +1010,14 @@ nav#sidebar.shrinked a[aria-expanded="true"]::after {
 .statistic-block strong {
   text-transform: uppercase;
   font-size: 0.9rem;
-  color: #FFFFFF;
+  color: #000000;
   margin-bottom: 5px;
 }
 
 .statistic-block .icon {
   margin-bottom: 5;
   font-size: 1.2rem;
-  color: #FFFFFF;
+  color: #000000;
 }
 
 .statistic-block .number {
@@ -1540,7 +1540,7 @@ nav#sidebar.shrinked a[aria-expanded="true"]::after {
 
 .modal-open .modal .modal-content {
   border-radius: 0;
-  background: #2d3035;
+  background: #4741a3;
 }
 
 .modal-open .modal .modal-header,
@@ -1618,7 +1618,7 @@ nav#sidebar.shrinked a[aria-expanded="true"]::after {
 }
 
 .login-page .form-holder .form {
-  background: #2d3035;
+  background: #4741a3;
 }
 
 .login-page .form-holder .form .form-group {
@@ -2083,7 +2083,7 @@ STYLE SWITCHER FOR DEMO
   position: fixed;
   top: 160px;
   right: 0;
-  background: #2d3035;
+  background: #4741a3;
   border: solid 1px #6a6c70;
   z-index: 2000;
 }
@@ -2974,7 +2974,7 @@ a.text-primary:focus, a.text-primary:hover {
 
 .page-item.disabled .page-link {
   color: #868e96;
-  background-color: #2d3035;
+  background-color: #4741a3;
   border-color: #8a8d93;
 }
 
@@ -3292,7 +3292,7 @@ code {
   padding: 0.2rem 0.4rem;
   font-size: 90%;
   color: #429244;
-  background-color: #2d3035;
+  background-color: #4741a3;
   border-radius: 0.25rem;
 }
 
@@ -3338,7 +3338,7 @@ pre code {
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
   color: #8a8d93;
-  background-color: #2d3035;
+  background-color: #4741a3;
   border-color: #FFFFFF;
 }
 
@@ -3360,7 +3360,7 @@ pre code {
 * 8. CARD
 */
 .card {
-  background-color: #2d3035;
+  background-color: #4741a3;
   border: 1px solid #FFFFFF;
   border-radius: 0;
 }
@@ -3466,6 +3466,6 @@ pre code {
 }
 
 .card .list-group-item {
-  background: #2d3035;
+  background: #4741a3;
   border-color: #FFFFFF;
 }

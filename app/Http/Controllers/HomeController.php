@@ -174,10 +174,10 @@ public function book_info()
         return redirect()->back();
     }
 
-    public function view_payment()
+    public function view_payment_user()
     {
         $data=Payment::all();
-        return view('home.view_payment',compact('data'));
+        return view('home.view_payment_user',compact('data'));
     }
 
     public function download(Request $request,$file)

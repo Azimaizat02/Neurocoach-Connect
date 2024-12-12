@@ -8,30 +8,33 @@
 
     <style type="text/css">
 
-        .table_deg
+.table_deg
         {
-            border: 2px solid white;
-            width: 100%;
+            border-collapse: collapse; /* Ensures borders are not doubled */
+            border: 2px solid black;
+            width: 90%;
             margin: auto;
             text-align: center;
             margin-top: 40px;
-            margin-bottom: 50px;
+            margin-bottom: 180px;
         }
 
         .th_deg
         {
             background-color: skyblue;
-            padding: 15px;
+    padding: 15px;
+    border: 2px solid black; /* Adds vertical borders for header cells */
         }
 
         tr
         {
-            border: 3px solid white;
+            border: 2px solid black;
         }
 
         td
         {
             padding: 10px;
+            border: 2px solid black; /* Adds vertical borders for table cells */
         }
         </style>
    </head>
@@ -67,8 +70,8 @@
         <tr>
             <td>{{$data->title}}</td>
             <td>{{$data->description}}</td>
-            <td><a href="{{url('show_payment',$data->id)}}">View</a></td>
-            <td><a href="{{url('/download',$data->file)}}">Download</a></td>
+            <td><a href="{{url('show_payment',$data->id)}}"><strong>View</strong></a></td>
+            <td><a href="{{url('/download',$data->file)}}"><strong>Download</strong></a></td>
         </tr>
         @endforeach
 

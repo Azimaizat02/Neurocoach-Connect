@@ -10,8 +10,9 @@
 
         .table_deg
         {
-            border: 2px solid white;
-            width: 100%;
+            border-collapse: collapse; /* Ensures borders are not doubled */
+            border: 2px solid black;
+            width: 90%;
             margin: auto;
             text-align: center;
             margin-top: 40px;
@@ -21,17 +22,19 @@
         .th_deg
         {
             background-color: skyblue;
-            padding: 15px;
+    padding: 15px;
+    border: 2px solid black; /* Adds vertical borders for header cells */
         }
 
         tr
         {
-            border: 3px solid white;
+            border: 2px solid black;
         }
 
         td
         {
             padding: 10px;
+            border: 2px solid black; /* Adds vertical borders for table cells */
         }
         </style>
    </head>
@@ -89,7 +92,7 @@
                 @endif
             </td>
             <td><a href="{{url('payment')}}"><b>Click Here</b></a></td>
-            <td><a href="{{url('view_payment')}}"><b>Click Here</b></a></td>
+            <td><a href="{{url('view_payment_user')}}"><b>Click Here</b></a></td>
         </tr>
         @endforeach
 

@@ -19,7 +19,7 @@
                         </div>
                         <div class="progress progress-template">
                             <div role="progressbar"
-                                 style="width: {{ $patientProgress }}%"
+                                 style="width: {{ $patientProgress }}%; background-color: red;"
                                  aria-valuenow="{{ $patientProgress }}"
                                  aria-valuemin="0"
                                  aria-valuemax="100"
@@ -41,7 +41,7 @@
                         </div>
                         <div class="progress progress-template">
                             <div role="progressbar"
-                                 style="width: {{ $appointmentProgress }}%"
+                                 style="width: {{ $appointmentProgress }}%; background-color: red;"
                                  aria-valuenow="{{ $appointmentProgress }}"
                                  aria-valuemin="0"
                                  aria-valuemax="100"
@@ -62,7 +62,7 @@
                         </div>
                         <div class="progress progress-template">
                             <div role="progressbar"
-                                 style="width: {{ $invoiceProgress }}%"
+                                 style="width: {{ $invoiceProgress }}%; background-color: red;"
                                  aria-valuenow="{{ $invoiceProgress }}"
                                  aria-valuemin="0"
                                  aria-valuemax="100"
@@ -83,11 +83,11 @@
                         </div>
                         <div class="progress progress-template">
                             <div role="progressbar"
-                                 style="width: {{ $reportProgress }}%"
+                                 style="width: {{ $reportProgress }}%; background-color: red;"
                                  aria-valuenow="{{ $reportProgress }}"
                                  aria-valuemin="0"
                                  aria-valuemax="100"
-                                 class="progress-bar progress-bar-template dashbg-2">
+                                 class="progress-bar progress-bar-template">
                             </div>
                         </div>
                     </div>
@@ -102,7 +102,7 @@
             <div class="row">
                 <!-- Bar Chart for Appointment Status -->
                 <div class="col-lg-6">
-                    <h3>Appointment Status Count</h3>
+                    <h3 style="color: black;">Appointment Status Count</h3>
                     <div style="width: 100%; height: 400px;">
                         <canvas id="appointmentStatusChart"></canvas>
                     </div>
@@ -110,7 +110,7 @@
 
                 <!-- Line Chart for Monthly Appointments Trend -->
                 <div class="col-lg-6">
-                    <h3>Monthly Appointments Trend</h3>
+                    <h3 style="color: black;">Monthly Appointments Trend</h3>
                     <div style="width: 100%; height: 400px;">
                         <canvas id="lineChart"></canvas>
                     </div>

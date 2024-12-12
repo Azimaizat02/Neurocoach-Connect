@@ -5,22 +5,28 @@
     @include('admin.css')
     <style type="text/css">
         .table_deg {
-            border: 2px solid white;
-            width: 100%;
-            margin: auto;
-            text-align: center;
-            margin-top: 40px;
-        }
-        .th_deg {
-            background-color: skyblue;
-            padding: 15px;
-        }
-        tr {
-            border: 3px solid white;
-        }
-        td {
-            padding: 10px;
-        }
+    border-collapse: collapse; /* Ensures borders are not doubled */
+    border: 2px solid black;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.th_deg {
+    background-color: skyblue;
+    padding: 15px;
+    border: 2px solid black; /* Adds vertical borders for header cells */
+}
+
+tr {
+    border: 2px solid black;
+}
+
+td {
+    padding: 10px;
+    border: 2px solid black; /* Adds vertical borders for table cells */
+}
         .calendar-button {
             padding: 10px 20px;
             background-color: #4CAF50;

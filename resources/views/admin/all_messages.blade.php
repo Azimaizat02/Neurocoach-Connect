@@ -4,30 +4,29 @@
 @include('admin.css')
 <style type="text/css">
 
-    .table_deg
-    {
-        border: 2px solid white;
-        width: 80%;
-        margin: auto;
-        text-align: center;
-        margin-top: 40px;
-    }
+.table_deg {
+    border-collapse: collapse; /* Ensures borders are not doubled */
+    border: 2px solid black;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    margin-top: 40px;
+}
 
-    .th_deg
-    {
-        background-color: skyblue;
-        padding: 15px;
-    }
+.th_deg {
+    background-color: skyblue;
+    padding: 15px;
+    border: 2px solid black; /* Adds vertical borders for header cells */
+}
 
-    tr
-    {
-        border: 3px solid white;
-    }
+tr {
+    border: 2px solid black;
+}
 
-    td
-    {
-        padding: 10px;
-    }
+td {
+    padding: 10px;
+    border: 2px solid black; /* Adds vertical borders for table cells */
+}
     </style>
   </head>
   <body>

@@ -102,7 +102,7 @@ Route::get('/payment', [HomeController::class,'payment']);
 
 Route::post('/add_payment', [HomeController::class,'add_payment']);
 
-Route::get('/view_payment', [HomeController::class,'view_payment']);
+Route::get('/view_payment_user', [HomeController::class,'view_payment_user']);
 
 Route::get('/download/{file}', [HomeController::class,'download']);
 
