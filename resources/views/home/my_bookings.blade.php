@@ -66,6 +66,7 @@
            <th class="th_deg">End</th>
            <th class="th_deg">Date</th>
            <th class="th_deg">Status</th>
+           <th class="th_deg">Request Changes</th>
            <th class="th_deg">Payment</th>
            <th class="th_deg">Payment Details</th>
 
@@ -91,6 +92,7 @@
                 <span style="color: green;">WAITING</span>
                 @endif
             </td>
+            <td><a href="{{url('contact_us')}}"><b>Message</b></a></td>
             <td><a href="{{url('payment')}}"><b>Click Here</b></a></td>
             <td><a href="{{url('view_payment_user')}}"><b>Click Here</b></a></td>
         </tr>
