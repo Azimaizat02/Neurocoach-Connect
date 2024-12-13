@@ -66,7 +66,7 @@ td {
                 <td>{{$data->ondate}}</td>
                 <td>
                     @if($data->status == 'APPROVE')
-                    <span style="color: skyblue;">APPROVED</span>
+                    <span style="color: darkblue;">APPROVED</span>
                     @endif
 
                     @if($data->status == 'REJECTED')
@@ -74,7 +74,7 @@ td {
                     @endif
 
                     @if($data->status == 'waiting')
-                    <span style="color: yellow;">WAITING</span>
+                    <span style="color: green;">WAITING</span>
                     @endif
                 </td>
                 <td> <a onclick="confirmation(event)" class= "btn btn-danger" href="{{url('delete_appointment',$data->id)}}">Delete</a></td>
