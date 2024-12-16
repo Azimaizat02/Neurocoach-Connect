@@ -41,7 +41,7 @@
                 @csrf
 
                 <div class="div_deg">
-                    <label>Upload Image</label>
+                    <label style="color: black;">Upload Image</label>
                     <input type="file" name="image" required>
                 </div>
 

@@ -33,18 +33,18 @@
             <form action="{{url('add_invoice')}}" method="Post" enctype="multipart/form-data">
                 @csrf
                 <div class="div_deg">
-                    <label>Invoice Title</label>
+                    <label style="color: black;">Invoice Title</label>
                     <input type="text" name="title" placeholder="Invoice Title">
 
                 </div>
                 <div class="div_deg">
-                    <label>Description</label>
+                    <label style="color: black;">Description</label>
                     <input type="text" name="description" placeholder="Invoice description">
 
                 </div>
 
                 <div class="div_deg">
-                    <label>Upload Invoice</label>
+                    <label style="color: black;">Upload Invoice</label>
                     <input type="file" name="file">
                 </div>
 

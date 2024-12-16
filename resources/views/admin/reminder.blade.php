@@ -7,7 +7,7 @@
         .table_deg {
     border-collapse: collapse; /* Ensures borders are not doubled */
     border: 2px solid black;
-    width: 80%;
+    width: 100%;
     margin: auto;
     text-align: center;
     margin-top: 40px;

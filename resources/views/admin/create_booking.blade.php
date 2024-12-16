@@ -33,22 +33,22 @@
             <form action="{{url('add_booking')}}" method="Post" enctype="multipart/form-data">
                 @csrf
                 <div class="div_deg">
-                    <label>Booking Title</label>
+                    <label style="color: black;">Booking Title</label>
                     <input type="text" name="title">
 
                 </div>
                 <div class="div_deg">
-                    <label>Description</label>
+                    <label style="color: black;">Description</label>
                     <textarea name="description"></textarea>
 
                 </div>
                 <div class="div_deg">
-                    <label>Price</label>
+                    <label style="color: black;">Price</label>
                     <input type="number" name="price">
 
                 </div>
                 <div class="div_deg">
-                    <label>Booking Type</label>
+                    <label style="color: black;">Booking Type</label>
                     <select name="type">
                     <option selected value="EEG & ALERTNESS">EEG & ALERTNESS</option>
                     <option value="BRAIN TRAINING">BRAIN TRAINING</option>
@@ -57,7 +57,7 @@
 
 
                 <div class="div_deg">
-                    <label>Upload Image</label>
+                    <label style="color: black;">Upload Image</label>
                     <input type="file" name="image">
                 </div>
 

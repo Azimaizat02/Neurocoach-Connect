@@ -33,13 +33,13 @@
             <form action="{{url('add_report')}}" method="Post" enctype="multipart/form-data">
                 @csrf
                 <div class="div_deg">
-                    <label>Name</label>
+                    <label style="color: black;">Name</label>
                     <input type="text" name="name">
 
                 </div>
 
                 <div class="div_deg">
-                    <label>Report Type</label>
+                    <label style="color: black;">Report Type</label>
                     <select name="type">
                     <option selected value="General">General</option>
                     <option value="Incident">Incident</option>
@@ -48,17 +48,17 @@
                 </div>
 
                 <div class="div_deg">
-                    <label>Report Title</label>
+                    <label style="color: black;">Report Title</label>
                     <input type="text" name="title">
 
                 </div>
                 <div class="div_deg">
-                    <label>Description</label>
+                    <label style="color: black;">Description</label>
                     <textarea name="desc"></textarea>
 
                 </div>
                 <div class="div_deg">
-                    <label>Report Date</label>
+                    <label style="color: black;">Report Date</label>
                     <input type="text" name="date">
 
                 </div>

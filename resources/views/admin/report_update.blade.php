@@ -36,13 +36,13 @@
             <form action="{{url('edit_report',$data->id)}}" method="Post" enctype="multipart/form-data">
                 @csrf
                 <div class="div_deg">
-                    <label>Name</label>
+                    <label style="color: black;">Name</label>
                     <input type="text" name="name" value="{{$data->report_writer}}">
 
                 </div>
 
                 <div class="div_deg">
-                    <label>Report Type</label>
+                    <label style="color: black;">Report Type</label>
                     <select name="type">
                         <option selected value="{{$data->report_type}}">{{$data->report_type}}</option>
 
@@ -53,17 +53,17 @@
                 </div>
 
                 <div class="div_deg">
-                    <label>Report Title</label>
+                    <label style="color: black;">Report Title</label>
                     <input type="text" name="title" value="{{$data->report_title}}">
 
                 </div>
                 <div class="div_deg">
-                    <label>Description</label>
+                    <label style="color: black;">Description</label>
                     <textarea name="desc">{{$data->desc}}</textarea>
 
                 </div>
                 <div class="div_deg">
-                    <label>Report Date</label>
+                    <label style="color: black;">Report Date</label>
                     <input type="text" name="date" value="{{$data->report_date}}">
 
                 </div>
