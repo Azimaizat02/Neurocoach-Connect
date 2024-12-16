@@ -81,7 +81,7 @@
             <td>{{$data->ondate}}</td>
             <td>
                 @if($data->status == 'APPROVE')
-                <span style="color: skyblue;">APPROVED</span>
+                <span style="color: darkblue;">APPROVED</span>
                 @endif
 
                 @if($data->status == 'REJECTED')

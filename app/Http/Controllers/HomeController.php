@@ -47,32 +47,52 @@ class HomeController extends Controller
 
         $endTime = $request->endTime;
 
-        $isBooked = Appointment::where('appointment_id',$id)
-        ->where('start_time','<=',$endTime)
-        ->where('end_time','>=',$startTime)->exists();
+        $onDate = $request->sDate;
+
+        // Check for overlapping appointments on the same date
+        $isBooked = Appointment::where('ondate', $onDate) // Ensure same date
+            ->where(function ($query) use ($startTime, $endTime) {
+                $query->where(function ($q) use ($startTime, $endTime) {
+                    // Check for overlap with any existing appointment
+                    $q->where('start_time', '<', $endTime)
+                      ->where('end_time', '>', $startTime);
+                });
+            })->exists();
+
+        // $isBooked = Appointment::where('appointment_id',$id)
+        // ->where('start_time','<=',$endTime)
+        // ->where('end_time','>=',$startTime)->exists();
 
         if($isBooked)
         {
             return redirect()->back()->with('message','Appointment is already taken, please try different time');
         }
 
-        else
-        {
-        $data->start_time = $request->startTime;
+                // Save the new appointment
+            $data->start_time = $startTime;
+            $data->end_time = $endTime;
+            $data->ondate = $onDate;
+            $data->user_id = $user->id;
 
-        $data->end_time = $request->endTime;
+            $data->save();
 
-        $data->ondate = $request->sDate;
+            return redirect()->back()->with('message', 'Booking Appointment Successfully');
 
-        $data->user_id = $user->id;
+        // else
+        // {
+        // $data->start_time = $request->startTime;
 
-        $data->save();
+        // $data->end_time = $request->endTime;
 
-        return redirect()->back()->with('message','Booking Appointment Successfully');
-        }
+        // //
+        // $data->ondate = $request->sDate;
+        // //
+        // $data->user_id = $user->id;
 
+        // $data->save();
 
-
+        // return redirect()->back()->with('message','Booking Appointment Successfully');
+        // }
 
     }
 
