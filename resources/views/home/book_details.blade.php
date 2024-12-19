@@ -19,7 +19,20 @@
         width: 100%;
     }
 
+    header {
+    margin-bottom: 0; /* Remove any bottom margin from the header */
+    padding-bottom: 0; /* Remove any bottom padding from the header */
+}
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.our_book {
+    margin-top: 0; /* Remove unnecessary margin above the content section */
+    padding-top: 0; /* Remove unnecessary padding above the content section */
+}
     </style>
    </head>
    <!-- body -->
@@ -42,7 +55,7 @@
            <div class="row">
               <div class="col-md-12">
                  <div class="titlepage">
-                    <h2>Our Services</h2>
+                    <h2 style="padding-top: 20px">Our Services</h2>
                     <p>Learn about our top-notch EEG and neurofeedback therapy services, designed
                         to boost your mental health with seamless setup and personalized care!</p>
                         <p>For More Info, <a href="{{url('book_info')}}" style="color: red;">Click Here</a>.</p>
