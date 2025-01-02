@@ -39,6 +39,7 @@
       <!--  footer -->
       @include('home.footer')
 
+      @include('home.chatbot')
       <script type="text/javascript">
     $(window).scroll(function() {
   sessionStorage.scrollTop = $(this).scrollTop();

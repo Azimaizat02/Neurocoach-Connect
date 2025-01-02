@@ -39,9 +39,9 @@
                 <div class="col-md-10 offset-md-1">
 
                    <p>
-                    Copyright © 2024 Neurocoach Digital Lab. Design by <a href="https://html.design/">Free Html Templates</a>
-                   <br><br>
-                   Distributed by <a href="https://themewagon.com/" target="_blank">ThemeWagon</a>
+                    Copyright © 2024 Neurocoach Digital Lab.
+                   {{-- <br><br>
+                   Distributed by <a href="https://themewagon.com/" target="_blank">ThemeWagon</a> --}}
                    </p>
 
                 </div>

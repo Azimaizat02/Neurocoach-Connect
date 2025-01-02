@@ -39,7 +39,7 @@ use App\Notifications\SendEmailNotification;
 
 class AdminController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         if (Auth::id()) {
             $usertype = Auth()->user()->usertype;
@@ -75,11 +75,16 @@ class AdminController extends Controller
                 $invoiceProgress = min($invoiceProgress, 100); // Ensure it doesn't exceed 100%
 
              // Line chart data: appointments per month for the current year
-             $currentYear = Carbon::now()->year;
+              // Default year to current year
+              $year = $request->input('year', Carbon::now()->year);
+
+              // Calculate previous and next years
+              $previousYear = $year - 1;
+              $nextYear = $year + 1;
 
              $monthlyAppointments = DB::table('appointments')
                  ->select(DB::raw('MONTH(created_at) as month'), DB::raw('COUNT(*) as count'))
-                 ->whereYear('created_at', $currentYear)
+                 ->whereYear('created_at', $year)
                  ->groupBy(DB::raw('MONTH(created_at)'))
                  ->pluck('count', 'month')->toArray();
 
@@ -94,8 +99,19 @@ class AdminController extends Controller
             $rejectedCount = Appointment::where('status', 'REJECTED')->count();
             $waitingCount = Appointment::where('status', 'waiting')->count();
 
+              // Check if the request is an AJAX request
+              if ($request->ajax()) {
+                return response()->json([
+                    'appointmentsData' => $appointmentsData,
+                    'year' => $year,
+                    'previousYear' => $previousYear,
+                    'nextYear' => $nextYear,
+                ]);
+            }
+
              // Pass progress percentages and chart data to the view
-             return view('admin.index', compact('user', 'appointment', 'report', 'invoice', 'patientProgress', 'appointmentProgress', 'reportProgress', 'invoiceProgress', 'appointmentsData','approvedCount','rejectedCount','waitingCount'));
+             return view('admin.index', compact('user', 'appointment', 'report', 'invoice', 'patientProgress', 'appointmentProgress', 'reportProgress', 'invoiceProgress', 'appointmentsData','approvedCount','rejectedCount','waitingCount', 'year','previousYear',
+                'nextYear'));
             } else {
                 return redirect()->back();
             }

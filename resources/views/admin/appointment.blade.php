@@ -41,7 +41,7 @@ td {
         <table class="table_deg">
             <tr>
                <th class="th_deg">ID</th>
-               <th class="th_deg">Appointment Type</th>
+               <th class="th_deg">Appointment Title</th>
                <th class="th_deg">Patient Name</th>
                <th class="th_deg">Email</th>
                <th class="th_deg">Phone</th>
@@ -57,7 +57,7 @@ td {
             @foreach($data as $data)
             <tr>
                 <td>{{$data->appointment_id}}</td>
-                <td>{{$data->book->booking_type}}</td>
+                <td>{{ ucwords(strtolower($data->book->booking_title)) }}</td>
                 <td>{{$data->name}}</td>
                 <td>{{$data->email}}</td>
                 <td>{{$data->phone}}</td>

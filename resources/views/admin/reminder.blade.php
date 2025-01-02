@@ -51,7 +51,7 @@ td {
         <div class="container-fluid">
           <table class="table_deg">
             <tr>
-              <th class="th_deg">Appointment Type</th>
+              <th class="th_deg">Appointment Title</th>
               <th class="th_deg">Patient Name</th>
               <th class="th_deg">Email</th>
               <th class="th_deg">Phone</th>
@@ -63,7 +63,7 @@ td {
 
             @foreach($data as $data)
             <tr>
-              <td>{{ $data->book->booking_type }}</td>
+                <td>{{ ucwords(strtolower($data->book->booking_title)) }}</td>
               <td>{{ $data->name }}</td>
               <td>{{ $data->email }}</td>
               <td>{{ $data->phone }}</td>
@@ -71,7 +71,14 @@ td {
               <td>{{ $data->end_time }}</td>
               <td>{{ $data->ondate }}</td>
               <td>
-                <button class="calendar-button" onclick="addToCalendar('{{ $data->book->booking_type }}', '{{ $data->ondate }}', '{{ $data->start_time }}', '{{ $data->end_time }}')">Google Calendar</button>
+                <button class="calendar-button"
+          onclick="addToCalendar('{{ $data->book->booking_title }}',
+                                  '{{ $data->ondate }}',
+                                  '{{ $data->start_time }}',
+                                  '{{ $data->end_time }}',
+                                  '{{ $data->name }}',
+                                  '{{ $data->phone }}')">Google Calendar
+  </button>
               </td>
             </tr>
             @endforeach
@@ -81,7 +88,7 @@ td {
           <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment-with-locales.min.js" integrity="sha512-4F1cxYdMiAW98oomSLaygEwmCnIP38pb4Kx70yQYqRwLVCs3DbRumfBq82T08g/4LJ/smbFGFpmeFlQgoDccgg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
           <script type="text/javascript">
-            function addToCalendar(event_name, date, start_time, end_time) {
+            function addToCalendar(event_name, date, start_time, end_time, patient_name, phone) {
               // Format the date and time for Google Calendar
               var start_date = moment(date).format('YYYYMMDD');
               var end_date = moment(date).format('YYYYMMDD');
@@ -90,11 +97,19 @@ td {
 
               var location = 'IIUM, Neurocoach Digital Lab, KICT, Jln Gombak, 50728, Wilayah Persekutuan Kuala Lumpur';  // You can set the location dynamically if needed
 
+              // Prepare the description with patient details
+              var description = "Patient Name: " + patient_name + "\n" +
+                                "Start session: " + start_time + "\n" +
+                                "End session: " + end_time + "\n" +
+                                "Phone: " + phone;
+
               // Open the Google Calendar event with the dynamic data
               window.open(
                 "https://www.google.com/calendar/render?action=TEMPLATE&text=" + event_name +
                 "&dates=" + start_date + "T" + start_time_formatted + "Z/" + end_date + "T" + end_time_formatted + "Z" +
-                "&location=" + location + "&pli=1&uid=&sf=true&output=xml"
+                "&location=" + location +
+                "&details=" + encodeURIComponent(description) +  // Add the description here
+                "&pli=1&uid=&sf=true&output=xml"
               );
             }
           </script>

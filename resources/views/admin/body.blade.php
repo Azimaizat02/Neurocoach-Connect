@@ -4,6 +4,7 @@
             <h2 class="h5 no-margin-bottom">Dashboard</h2>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <section class="no-padding-top no-padding-bottom">
         <div class="container-fluid">
             <div class="row">
@@ -112,6 +113,11 @@
                 <div class="col-lg-6">
                     <h3 style="color: black;">Monthly Appointments Trend</h3>
                     <div style="width: 100%; height: 400px;">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 15px;">
+                            <button id="prevYearBtn" class="btn btn-primary">Previous Year</button>
+                            <span id="currentYear" style="margin: 0 10px; color:black">{{ $year }}</span>
+                            <button id="nextYearBtn" class="btn btn-primary">Next Year</button>
+                        </div>
                         <canvas id="lineChart"></canvas>
                     </div>
                 </div>
@@ -155,8 +161,10 @@
         });
 
         // Line Chart for Monthly Appointments Trend
+
         const appointmentsData = @json($appointmentsData);
         const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        const currentYear = @json($year);
 
         var lineCtx = document.getElementById('lineChart').getContext('2d');
         var lineChart = new Chart(lineCtx, {
@@ -191,6 +199,37 @@
                     }
                 }
             }
+        });
+
+        // Update chart for the selected year
+        function updateChartForYear(year) {
+            $.ajax({
+                url: "{{ route('home') }}",
+                method: 'GET',
+                data: { year: year },
+                success: function(response) {
+                    // Update chart data
+                    lineChart.data.datasets[0].data = response.appointmentsData;
+                    lineChart.update();
+
+                    // Update the displayed year
+                    document.getElementById('currentYear').textContent = response.year;
+                },
+            });
+        }
+
+        $(document).ready(function () {
+            // Update chart when the Previous Year button is clicked
+            $('#prevYearBtn').click(function () {
+                var prevYear = parseInt($('#currentYear').text()) - 1;
+                updateChartForYear(prevYear);
+            });
+
+            // Update chart when the Next Year button is clicked
+            $('#nextYearBtn').click(function () {
+                var nextYear = parseInt($('#currentYear').text()) + 1;
+                updateChartForYear(nextYear);
+            });
         });
     </script>
 

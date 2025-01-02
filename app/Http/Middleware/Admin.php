@@ -23,4 +23,10 @@ class Admin
 
         abort('401');
     }
+    protected function redirectTo($request)
+{
+    if (! $request->expectsJson()) {
+        return redirect('/');
+    }
+}
 }
